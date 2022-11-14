@@ -1,0 +1,55 @@
+<!-- include "exercise2.php" -->
+
+<!-- This HTML file will consist of the following:
+- At least five questions that are multiple choice
+- Eachquestionmusthavefourpossibleanswers.Theanswerswillbeintheformof
+radio buttons like this picture
+- Below the question there will be a single submit button labeled “Submit quiz” -->
+
+<!-- Create a quiz that has five questions. "exercise.php" will check the answers -->
+
+<h1>Quiz</h1>
+
+<body>
+  
+
+
+    <!--  Create a quiz with 5 questions -->
+    <form action="exercise2.php" method="post">
+        <h3>What is the output of the following code?</h3>
+        <p>echo "Hello World";</p>
+        <input type="radio" name="question1" value="Hello World">Hello World<br>
+        <input type="radio" name="question1" value="Hello">Hello<br>
+        <input type="radio" name="question1" value="World">World<br>
+        <input type="radio" name="question1" value="Nothing">Nothing<br>
+        <h3>What is the capitol of Kansas?</h3>
+        <input type="radio" name="question2" value="Wichita">Wichita<br>
+        <input type="radio" name="question2" value="Topeka">Topeka<br>
+        <input type="radio" name="question2" value="Lawrence">Lawrence<br>
+        <input type="radio" name="question2" value="Lenexa">Lenexa<br>
+        <h3>Which number is the highest?</h3>
+        <input type="radio" name="question3" value="2">2<br>
+        <input type="radio" name="question3" value="3">3<br>
+        <input type="radio" name="question3" value="1">1<br>
+        <input type="radio" name="question3" value="4">4<br>
+        <h3>What is the largest planet in our solar system?</h3>
+        <input type="radio" name="question4" value="The Sun">The Sun<br>
+        <input type="radio" name="question4" value="Jupiter">Jupiter<br>
+        <input type="radio" name="question4" value="Earth">Earth<br>
+        <input type="radio" name="question4" value="Mercury">Mercury<br>
+        <h3>What is the last letter in the alphabet?</h3>
+        <input type="radio" name="question5" value="Z">Z<br>
+        <input type="radio" name="question5" value="A">A<br>
+        <input type="radio" name="question5" value="F">F<br>
+        <input type="radio" name="question5" value="U">U<br>
+        <p> </p>
+        <p> </p>
+        <input type="submit" value="Submit quiz">
+
+        
+
+
+
+    </form>
+
+</body>

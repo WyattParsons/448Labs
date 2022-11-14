@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <!-- show lambo.jpeg image with price -->
+    <head>
+        <!-- create a blue header -->
+        <h1 style="background-color:lightblue;">Shopping Cart</h1>
+
+        <link rel="stylesheet" href="style.css">
+        <!-- link js file -->
+        <script src="formChecker.js"></script>
+    </head>
+    <body>
+        <!-- initalize variables to 0 -->
+        
+        
+        <div class="container">
+            <!-- ! LAMBO -->
+            <div class="item">
+                <img src="lambo.jpeg" alt="Lamborghini" width="400" height="200">
+                <p>Lamborghini</p>
+                <p>$500,000</p>
+                <form action="customerBackend.php" method="post">
+                    Add?
+                    <input type="checkbox" name="lamboADD" value="500000" />
+                    <!-- <input type="submit" name="formSubmit" value="Submit" /> -->
+
+               
+                
+                <!-- ask the user to choose from three shipping options -->
+                <p>Shipping Options: <select name="shipping1">
+                    <option value="0">Free 7 Day</option>
+                    <option value="50">$50.00 Over Night</option>
+                    <option value="5">$5.00 Three Day</option>
+                </select></p>
+                
+                <form action="customerBackend.php" method="post">
+                    <input type="hidden" name="item" value="Lamborghini">
+                    <input type="hidden" name="price" value="500000">
+                    <input type="reset" value="Reset">
+                <!-- TODO </form> -->
+                
+
+
+                <!-- ! TESLA -->
+            </div>
+                    <div class="item">
+                <img src="tesla.jpeg" alt="Tesla" width="400" height="200">
+                <p>Tesla</p>
+                <p>$100,000</p>
+                <form action="customerBackend.php" method="post">
+                    Add?
+                    <input type="checkbox" name="teslaADD" value="100000" />
+               
+                   
+                    <!-- ask the user to choose from three shipping options -->
+                    <p>Shipping Options: <select name="shipping2">
+                        <option value="free">Free 7 Day</option>
+                        <option value="50">$50.00 Over Night</option>
+                        <option value="5">$5.00 Three Day</option>
+                    </select></p>
+                     <!-- TODO </form> -->
+               
+                <form action="customerBackend.php" method="post">
+                    <input type="hidden" name="item" value="Tesla">
+                    <input type="hidden" name="price" value="100000">
+
+                    <input type="reset" value="Reset">
+                 <!-- TODO </form> -->
+                    </div>
+           
+            <!-- ! BUGATTI -->
+            <div class="item">
+                <img src="bugatti.jpeg" alt="Bugatti" width="400" height="200">
+                <p>Bugatti</p>
+                <p>$1,000,000</p>
+                <form action="customerBackend.php" method="post">
+                    Add?
+                    <input type="checkbox" name="bugattiADD" value="1000000" />
+               
+                    <!-- ask the user to choose from three shipping options -->
+                    <p>Shipping Options: <select name="shipping3">
+                        <option value="free">Free 7 Day</option>
+                        <option value="50">$50.00 Over Night</option>
+                        <option value="5">$5.00 Three Day</option>
+                    </select></p>
+                     <!-- TODO </form> -->
+                <form action="customerBackend.php" method="post">
+                    <input type="hidden" name="item" value="Bugatti">
+                    <input type="hidden" name="price" value="1000000">
+                    <input type="reset" value="Reset">
+                    
+                    <!-- Username must be in the form of an email address (name@domain.com) -->
+                    <p>Email</p>
+                    <input type="text" name="username" placeholder="Enter Email" required="required" oninput="usernameCheck(this)">
+                    
+                    <p>Password:</p>
+                    <input name="password" required="required" placeholder="Enter Password" type="password" id="password" oninput="check(this)" />
+                    
+                    <!-- <script language='javascript' type='text/javascript'> -->
+                        
+                    <!-- </script> -->
+                    <br /><br />
+                    <input type="submit" />
+                </form>
+               
+                </div>
+        </div>
+                
+         
+        </body>
+</html>

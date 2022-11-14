@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="colorChanging.css">
+</head>
+<body>
+
+<!-- Class div border. -->
+<div class="border">
+    <h1>Color Changing</h1>
+</div>
+
+<p>Change the Border Color and Width:</p>
+
+<!-- Ask user for Red, Green, and Blue values to change the color of the border -->
+<form>
+    <label for="red">Red:</label>
+    <input type="range" id="red" name="red" min="0" max="255" value="0" oninput="changeColor()">
+    <label for="green">Green:</label>
+    <input type="range" id="green" name="green" min="0" max="255" value="0" oninput="changeColor()">
+    <label for="blue">Blue:</label>
+    <input type="range" id="blue" name="blue" min="0" max="255" value="0" oninput="changeColor()">
+    <!-- create change width slider -->
+    <label for="width">Width:</label>
+    <input type="range" id="width" name="width" min="0" max="100" value="0" oninput="changeWidth()">
+
+</form>
+
+<p>Change the Background Color:</p>
+
+<!-- form for background color -->
+<form>
+    <label for="red">Red:</label>
+    <input type="range" id="red" name="red" min="0" max="255" value="0" oninput="changeBackgroundColor()">
+    <label for="green">Green:</label>
+    <input type="range" id="green" name="green" min="0" max="255" value="0" oninput="changeBackgroundColor()">
+    <label for="blue">Blue:</label>
+    <input type="range" id="blue" name="blue" min="0" max="255" value="0" oninput="changeBackgroundColor()">
+</form>
+
+<!-- change background color of "border" class using "changeBackgroundColor()" -->
+<script>
+    function changeBackgroundColor() {
+        var red = document.getElementById("red").value;
+        var green = document.getElementById("green").value;
+        var blue = document.getElementById("blue").value;
+        document.getElementsByClassName("border")[0].style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+    }
+</script>
+
+
+<script>
+    function changeColor() {
+        var red = document.getElementById("red").value;
+        var green = document.getElementById("green").value;
+        var blue = document.getElementById("blue").value;
+        document.getElementsByClassName("border")[0].style.borderColor = "rgb(" + red + "," + green + "," + blue + ")";
+        document.getElementsByClassName("border")[1].style.borderColor = "rgb(" + red + "," + green + "," + blue + ")";
+        document.getElementsByTagName("h1")[0].style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+    }
+</script>
+
+<!--changeWidth script -->
+<script>
+    function changeWidth() {
+        var width = document.getElementById("width").value;
+        document.getElementsByClassName("border")[0].style.borderWidth = width + "px";
+        document.getElementsByClassName("border")[1].style.borderWidth = width + "px";
+    }
+</script>
+
+</body>
+</html>
